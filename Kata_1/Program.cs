@@ -17,7 +17,17 @@ namespace Kata_1_Code
             while (Value > 0)
             {
 
-                if (Value >= 50)
+                if (Value >= 100)
+                {
+                    romanresult += "C";
+                    Value -= 100;
+                }
+                else if (Value >= 90)
+                {
+                    romanresult += "XC";
+                    Value -= 90;
+                }
+                else if (Value >= 50)
                 {
                     romanresult += "L";
                     Value -= 50;
