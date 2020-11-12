@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Kata_1_Code
 {
@@ -20,79 +21,79 @@ namespace Kata_1_Code
 
         public static string TranslateToRoman(uint Value)
         {
-            var romanResult = "";
+            var romanResult = new StringBuilder();
 
             while (Value > 0)
             {
 
                 if (Value >= 1000)
                 {
-                    romanResult += "M";
+                    romanResult.Append("M");
                     Value -= 1000;
                 }
                 else if (Value >= 900)
                 {
-                    romanResult += "CM";
+                    romanResult.Append("CM");
                     Value -= 900;
                 }
                 else if (Value >= 500)
                 {
-                    romanResult += "D";
+                    romanResult.Append("D");
                     Value -= 500;
                 }
                 else if (Value >= 400)
                 {
-                    romanResult += "CD";
+                    romanResult.Append("CD");
                     Value -= 400;
                 }
                 else if (Value >= 100)
                 {
-                    romanResult += "C";
+                    romanResult.Append("C");
                     Value -= 100;
                 }
                 else if (Value >= 90)
                 {
-                    romanResult += "XC";
+                    romanResult.Append("XC");
                     Value -= 90;
                 }
                 else if (Value >= 50)
                 {
-                    romanResult += "L";
+                    romanResult.Append("L");
                     Value -= 50;
                 }
                 else if (Value >= 40)
                 {
-                    romanResult += "XL";
+                    romanResult.Append("XL");
                     Value -= 40;
                 }
                 else if (Value >= 10)
                 {
-                    romanResult += "X";
+                    romanResult.Append("X");
                     Value -= 10;
                 }
                 else if(Value == 9)
                 {
-                    romanResult += "IX";
+                    romanResult.Append("IX");
                     Value -= 9;
                 }
                 else if (Value == 4)
                 {
-                    romanResult += "IV";
+                    romanResult.Append("IV");
                     Value -= 4;
                 }                
                 else if (Value >= 5)
                 {
-                    romanResult += "V";
+                    romanResult.Append("V");
                     Value -= 5;
                 }
                 else
                 {
-                    romanResult += "I";
+                    romanResult.Append("I");
                     Value -= 1;
                 }
             }
 
-            return romanResult;
+            return romanResult.ToString();
 
         }
     }
