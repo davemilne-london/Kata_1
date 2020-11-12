@@ -17,11 +17,21 @@ namespace Kata_1_Code
             while (Value > 0)
             {
 
-                if (Value == 4)
+                if (Value >= 10)
+                {
+                    romanresult += "X";
+                    Value -= 10;
+                }
+                else if(Value == 9)
+                {
+                    romanresult += "IX";
+                    Value -= 9;
+                }
+                else if (Value == 4)
                 {
                     romanresult += "IV";
                     Value -= 4;
-                }
+                }                
                 else if (Value >= 5)
                 {
                     romanresult += "V";
