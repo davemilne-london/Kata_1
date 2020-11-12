@@ -44,6 +44,12 @@ namespace Kata_1_Tests
         [InlineData(666, "DCLXVI")]
         [InlineData(783, "DCCLXXXIII")]
         [InlineData(899, "DCCCXCIX")]
+        [InlineData(900, "CM")]
+        [InlineData(957, "CMLVII")]
+        [InlineData(1000, "M")]
+        [InlineData(1066, "MLXVI")]
+        [InlineData(1666, "MDCLXVI")]
+        [InlineData(2020, "MMXX")]
         public void Return_RomanNumeral(uint input, string exp)
         {
 

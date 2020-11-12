@@ -17,7 +17,17 @@ namespace Kata_1_Code
             while (Value > 0)
             {
 
-                if (Value >= 500)
+                if (Value >= 1000)
+                {
+                    romanresult += "M";
+                    Value -= 1000;
+                }
+                else if (Value >= 900)
+                {
+                    romanresult += "CM";
+                    Value -= 900;
+                }
+                else if (Value >= 500)
                 {
                     romanresult += "D";
                     Value -= 500;
