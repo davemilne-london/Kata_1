@@ -6,7 +6,16 @@ namespace Kata_1_Code
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Enter Integer: ");
+            if (uint.TryParse(Console.ReadLine(), out var val))
+            {
+                Console.WriteLine($"Your Roman Numeral is {TranslateToRoman(val)}");
+            }
+            else
+            {
+                Console.WriteLine("That's not an unsigned integer!");
+            };
+            
         }
 
 
