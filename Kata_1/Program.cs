@@ -14,86 +14,85 @@ namespace Kata_1_Code
             else
             {
                 Console.WriteLine("That's not an unsigned integer!");
-            };
-            
+            };            
         }
 
 
         public static string TranslateToRoman(uint Value)
         {
-            var romanresult = "";
+            var romanResult = "";
 
             while (Value > 0)
             {
 
                 if (Value >= 1000)
                 {
-                    romanresult += "M";
+                    romanResult += "M";
                     Value -= 1000;
                 }
                 else if (Value >= 900)
                 {
-                    romanresult += "CM";
+                    romanResult += "CM";
                     Value -= 900;
                 }
                 else if (Value >= 500)
                 {
-                    romanresult += "D";
+                    romanResult += "D";
                     Value -= 500;
                 }
                 else if (Value >= 400)
                 {
-                    romanresult += "CD";
+                    romanResult += "CD";
                     Value -= 400;
                 }
                 else if (Value >= 100)
                 {
-                    romanresult += "C";
+                    romanResult += "C";
                     Value -= 100;
                 }
                 else if (Value >= 90)
                 {
-                    romanresult += "XC";
+                    romanResult += "XC";
                     Value -= 90;
                 }
                 else if (Value >= 50)
                 {
-                    romanresult += "L";
+                    romanResult += "L";
                     Value -= 50;
                 }
                 else if (Value >= 40)
                 {
-                    romanresult += "XL";
+                    romanResult += "XL";
                     Value -= 40;
                 }
                 else if (Value >= 10)
                 {
-                    romanresult += "X";
+                    romanResult += "X";
                     Value -= 10;
                 }
                 else if(Value == 9)
                 {
-                    romanresult += "IX";
+                    romanResult += "IX";
                     Value -= 9;
                 }
                 else if (Value == 4)
                 {
-                    romanresult += "IV";
+                    romanResult += "IV";
                     Value -= 4;
                 }                
                 else if (Value >= 5)
                 {
-                    romanresult += "V";
+                    romanResult += "V";
                     Value -= 5;
                 }
                 else
                 {
-                    romanresult += "I";
+                    romanResult += "I";
                     Value -= 1;
                 }
             }
 
-            return romanresult;
+            return romanResult;
 
         }
     }
