@@ -16,8 +16,22 @@ namespace Kata_1_Code
 
             while (Value > 0)
             {
-                romanresult += "I";
-                Value -= 1;
+
+                if (Value == 4)
+                {
+                    romanresult += "IV";
+                    Value -= 4;
+                }
+                else if (Value >= 5)
+                {
+                    romanresult += "V";
+                    Value -= 5;
+                }
+                else
+                {
+                    romanresult += "I";
+                    Value -= 1;
+                }
             }
 
             return romanresult;

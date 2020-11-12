@@ -13,6 +13,11 @@ namespace Kata_1_Tests
         [InlineData("I", 1)]
         [InlineData("II", 2)]
         [InlineData("III", 3)]
+        [InlineData("IV", 4)]
+        [InlineData("V", 5)]
+        [InlineData("VI", 6)]
+        [InlineData("VII", 7)]
+        [InlineData("VIII", 8)]
         public void Return_RomanNumeral(string exp, uint input)
         {
 
