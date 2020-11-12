@@ -26,6 +26,9 @@ namespace Kata_1_Tests
         [InlineData("XXXI", 31)]
         [InlineData("XXXIX", 39)]
         [InlineData("XL", 40)]
+        [InlineData("XLV", 45)]
+        [InlineData("XLIX", 49)]
+        [InlineData("L", 50)]
         public void Return_RomanNumeral(string exp, uint input)
         {
 
